@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-guid: 748eb70bc0d7515498ef73fed155520a
-MonoAssemblyImporter:
-  serializedVersion: 1
-  iconMap: {}
-  executionOrder: {}
+guid: bb69b614d93651841a2a27eddb753853
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -66,3 +62,5 @@ PluginImporter:
         CompileFlags: 
         FrameworkDependencies: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
