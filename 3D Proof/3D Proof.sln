@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D Proof.CSharp.Plugins", "3D Proof.CSharp.Plugins.csproj", "{4ED17372-2B16-BBCA-F7C7-F11414EB696F}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D Proof.CSharp", "3D Proof.CSharp.csproj", "{6AD72ACD-7103-6B15-1602-D61211DAF124}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ED17372-2B16-BBCA-F7C7-F11414EB696F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ED17372-2B16-BBCA-F7C7-F11414EB696F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ED17372-2B16-BBCA-F7C7-F11414EB696F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ED17372-2B16-BBCA-F7C7-F11414EB696F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AD72ACD-7103-6B15-1602-D61211DAF124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AD72ACD-7103-6B15-1602-D61211DAF124}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AD72ACD-7103-6B15-1602-D61211DAF124}.Release|Any CPU.ActiveCfg = Release|Any CPU
