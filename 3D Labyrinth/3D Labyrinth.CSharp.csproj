@@ -82,6 +82,7 @@
     <Compile Include="Assets\Resources\Scripts\AlienController.cs" />
     <Compile Include="Assets\Resources\Scripts\AnimationController.cs" />
     <Compile Include="Assets\Resources\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Resources\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Resources\Scripts\MinotaurMovement.cs" />
     <Compile Include="Assets\Resources\Scripts\PlayerController.cs" />
   </ItemGroup>
