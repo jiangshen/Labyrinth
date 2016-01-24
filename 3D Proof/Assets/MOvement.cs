@@ -1,26 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MOvement : MonoBehaviour {
     private Rigidbody rb;
     private float speed;
+    public Text horizontal;
+    public Camera death;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
         speed = 4;
+        horizontal.text = "Something";
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        //float moveHorizontal = Input.acceleration.x;
-        //float moveVertical = Input.acceleration.y * speed;
+        float moveHorizontal = 0;
+        float moveVertical = 0;
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
+        if (System.Math.Abs(Input.acceleration.x) > 0.1)
+        {
+            moveHorizontal = Input.acceleration.x;
+        }
+        if (System.Math.Abs(Input.acceleration.y) > 0.1)
+        {
+            moveVertical = (Input.acceleration.y + 0.3f) * speed;
+        }
+
 
         Vector3 movement = new Vector3(0, 0.0f, moveVertical * Time.deltaTime);
 
         transform.Translate(5f * movement);
         transform.Rotate(0, 2f*moveHorizontal, 0);
+
+        horizontal.text = Input.acceleration.y.ToString();
         //rb.AddTorque(5f*movement);
 
         //rb.AddForce(movement * 10);
@@ -29,6 +44,11 @@ public class MOvement : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.SetActive(false);
+        if (other.tag.Contains("Enemy"))
+        {
+            other.gameObject.SetActive(false);
+            death.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }
