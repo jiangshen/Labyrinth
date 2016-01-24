@@ -61,26 +61,33 @@
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
+      <HintPath>Assets\Resources\Plugins\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>Assets\Plugins\WebSocket\websocket-sharp.dll</HintPath>
+      <HintPath>Assets\Resources\Plugins\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="3D Labyrinth.CSharp.Plugins.csproj">
-      <Project>{7E2F4C88-8328-DE41-D609-5A7AD7E811AE}</Project>
-      <Name>3D Labyrinth.CSharp.Plugins</Name>
-    </ProjectReference>
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatChannel.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatClient.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatDisconnectCause.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatEventCode.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatOperationCode.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatParameterCode.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatPeer.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatState.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\ChatUserStatus.cs" />
+    <Compile Include="Assets\Resources\Plugins\PhotonChatApi\IChatClientListener.cs" />
+    <Compile Include="Assets\Resources\Plugins\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Resources\Scripts\AlienController.cs" />
+    <Compile Include="Assets\Resources\Scripts\AnimationController.cs" />
+    <Compile Include="Assets\Resources\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Resources\Scripts\MinotaurMovement.cs" />
+    <Compile Include="Assets\Resources\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AnimationController.cs" />
-    <Compile Include="Assets\Scripts\MinotaurMovement.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Plugins\Photon3Unity3D.xml" />
-    <None Include="Assets\Plugins\release_history.txt" />
+    <None Include="Assets\Resources\Plugins\Photon3Unity3D.xml" />
+    <None Include="Assets\Resources\Plugins\release_history.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

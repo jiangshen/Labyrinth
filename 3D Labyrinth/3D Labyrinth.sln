@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D Labyrinth.CSharp.Plugins", "3D Labyrinth.CSharp.Plugins.csproj", "{7E2F4C88-8328-DE41-D609-5A7AD7E811AE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D Labyrinth.CSharp", "3D Labyrinth.CSharp.csproj", "{1703325B-3AA7-7B9B-C081-119959AA5BDA}"
 EndProject
 Global
@@ -11,10 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7E2F4C88-8328-DE41-D609-5A7AD7E811AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E2F4C88-8328-DE41-D609-5A7AD7E811AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E2F4C88-8328-DE41-D609-5A7AD7E811AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E2F4C88-8328-DE41-D609-5A7AD7E811AE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1703325B-3AA7-7B9B-C081-119959AA5BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1703325B-3AA7-7B9B-C081-119959AA5BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1703325B-3AA7-7B9B-C081-119959AA5BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
