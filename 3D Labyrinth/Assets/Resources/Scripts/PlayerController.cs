@@ -4,14 +4,15 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
-    public Camera deathCamera;
+    public Camera redDeathCamera;
+    public Camera cyanDeathCamera;
 
     private const float VERTICAL_ADJUSTMENT = 0.1f; //Makes default tilt less.
     private const float ACCELEROMETER_SPEED = 4; //Speed thingy thingy
 
     //Base speeds for straight and turn
     private const float BASE_VERTICAL_SPEED = 6;
-    private const float BASE_HORIZONTAL_SPEED = 2;
+    private const float BASE_HORIZONTAL_SPEED = 4;
 
     //Dictionary of color of player to control keys
     private Dictionary<string, KeyCode[]> aKeyBindings;
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour {
 
 
         //Vector for vertical movement
-        Vector3 vMovement = new Vector3(0, 0.0f, fVertical * Time.deltaTime);
+        //Vector3 vMovement = new Vector3(0, 0.0f, fVertical * Time.deltaTime);
         //Uses movement vector to move forward and horizontal value to rotate
         //transform.Translate(BASE_VERTICAL_SPEED * vMovement);
         rb.velocity = transform.forward * BASE_VERTICAL_SPEED * fVertical;
@@ -78,10 +79,16 @@ public class PlayerController : MonoBehaviour {
         //If it is an enemy, you die and the camera is now on top.
         if (collision.gameObject.tag.Contains("Minotaur"))
         {
-            //other.gameObject.SetActive(false);
-            //deathCamera.gameObject.SetActive(true);
+            if (gameObject.tag.Contains("Red"))
+            {
+                redDeathCamera.gameObject.SetActive(true);
+            }
+            else if (gameObject.tag.Contains("Cyan"))
+            {
+                cyanDeathCamera.gameObject.SetActive(true);
+            }
             gameObject.SetActive(false);
-            //gameObject.GetComponent<BoxCollider>
+            
         }
     }
 }

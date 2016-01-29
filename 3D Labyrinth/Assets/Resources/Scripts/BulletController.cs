@@ -24,7 +24,7 @@ public class BulletController : MonoBehaviour {
         if (oCollision.gameObject.tag.Contains("Player"))
         {
             //oCollision.gameObject.transform.Translate(velocity);
-            oCollision.gameObject.transform.Translate(-1 * velocity / 2f, Space.World);
+            oCollision.gameObject.transform.Translate(-1 * velocity / 4f, Space.World);
         }
         gameObject.SetActive(false);
     }

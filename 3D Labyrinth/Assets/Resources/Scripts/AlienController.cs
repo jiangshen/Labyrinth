@@ -13,9 +13,11 @@ public class AlienController : MonoBehaviour
 
     //Base speeds for straight and turn
     private const float BASE_VERTICAL_SPEED = 5;
-    private const float BASE_HORIZONTAL_SPEED = 2;
+    private const float BASE_HORIZONTAL_SPEED = 4;
     private const float BASE_BULLET_SPEED = 10;
-    private const float BASE_COOLDOWN = 5;
+    private const float BASE_COOLDOWN = 3;
+
+    public AudioClip laserSound;
 
     private float m_fCooldown;
 
@@ -67,6 +69,8 @@ public class AlienController : MonoBehaviour
 
     void Shoot()
     {
+        GetComponent<AudioSource>().PlayOneShot(laserSound);
+
         Rigidbody laser;
         laser = Instantiate(projectile, transform.position + transform.forward, transform.rotation) as Rigidbody;
         Quaternion qRotation = Quaternion.AngleAxis(90, new Vector3(transform.forward.z, transform.forward.y, transform.forward.x));

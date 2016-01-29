@@ -9,18 +9,19 @@ public class MinotaurMovement : MonoBehaviour {
 
     //Base speeds for straight and turn
     private const float BASE_VERTICAL_SPEED = 5;
-    private const float BASE_HORIZONTAL_SPEED = 5;
+    private const float BASE_HORIZONTAL_SPEED = 4;
     private const float BASE_COOLDOWN = 5;
     private const float BASE_DASH_DECAY = 0.25f;
-    private const float BASE_DASH_MULTIPLIER = 5f;
+    private const float BASE_DASH_MULTIPLIER = 4f;
 
     private float m_fCooldown;
+    public AudioClip dashSound;
 
     private float m_fDash;
     //private float fVerticalAxis = 0;
     //private float fHorizontalAxis = 0;
 
-
+            
     void Start () {
         rb = GetComponent<Rigidbody>();
         m_fDash = 1;
@@ -33,9 +34,11 @@ public class MinotaurMovement : MonoBehaviour {
         float fVertical = 0; //Vertical Component
 
 
+
         //Check super key
         if (Input.GetKeyDown(KeyCode.Space) && m_fCooldown <= 0)
         {
+            GetComponent<AudioSource>().PlayOneShot(dashSound);
             Dash();
         }
 

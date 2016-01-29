@@ -6,20 +6,24 @@ public class WinConditions : MonoBehaviour {
 
 	private int m_nKillCount;
 	public Text txtAnnouncement;
+    
+    public Button btnReturn;
 	public int m_nGoal;
+    public Camera deathCamera;
+    public Camera victoryCamera;
 
 	private string m_szMessage;
 	private float m_fNotifTimer;
-	private float m_fDeathTimer;
+	//private float m_fDeathTimer;
 
-	private const float DEATH_TIMER = 10;
+	//private const float DEATH_TIMER = 60;
 	// Use this for initialization
 	void Start () {
 		m_nKillCount = 0;
 		m_szMessage = "";
 		m_fNotifTimer = 0;
 		m_nGoal = 2;
-		m_fDeathTimer = DEATH_TIMER;
+		//m_fDeathTimer = DEATH_TIMER;
 	}
 	
 	// Update is called once per frame
@@ -32,12 +36,7 @@ public class WinConditions : MonoBehaviour {
 			m_szMessage = "";
 		}
 
-		if (m_fDeathTimer > 0)
-		{
-			m_fDeathTimer -= Time.deltaTime;
-		} else {
-			m_szMessage = "Time has run out!";
-		}
+		
 
 		txtAnnouncement.text = m_szMessage;
 	}
@@ -53,7 +52,12 @@ public class WinConditions : MonoBehaviour {
 
 		if (m_nKillCount >= m_nGoal)
 		{
+            //VIECTORY
 			m_szMessage = "Minotaur has won!";
+            btnReturn.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+            victoryCamera.gameObject.SetActive(true);
+
 		}
 
 
